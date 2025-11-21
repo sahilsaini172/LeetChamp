@@ -28,7 +28,7 @@ export default function ProblemItem() {
           <div
             key={id}
             onClick={() => navigate(`/problem/${id}`)}
-            className="flex items-center w-full p-4"
+            className="flex items-center w-full p-4 rounded-lg"
           >
             <div className=""></div>
             <div className="px-4 w-fit">{id}.</div>

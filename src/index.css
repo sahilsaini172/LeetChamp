@@ -32,9 +32,9 @@
   --inverseOnSurface: #f4eff7;
   --outlineVarient: #cac4cf;
 
-  --easy: #4c662b;
-  --medium: #6d5e0f;
-  --hard: #8f4c38;
+  --easy: #406836;
+  --medium: #815512;
+  --hard: #904b40;
 
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -67,9 +67,9 @@
   --inverseOnSurface: #312f35;
   --outlineVarient: #48454e;
 
-  --easy: #b1d18a;
-  --medium: #dbc66e;
-  --hard: #ffb5a0;
+  --easy: #a5d395;
+  --medium: #f7bb70;
+  --hard: #ffb4a8;
   
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
