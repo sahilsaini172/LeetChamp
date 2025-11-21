@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary: #625690;
+  --onPrimary: #ffffff;
+  --primaryContainer: #e7deff;
+  --onPrimaryContainer: #493e76;
+
+  --secondary: #605b71;
+  --onSecondary: #ffffff;
+  --secondaryContainer: #e6dff9;
+  --onSecondaryContainer: #484458;
+
+  --tertiary: #7d5262;
+  --onTertiary: #ffffff;
+
+  --surface: #fdf7ff;
+  --onSurface: #1c1b20;
+  --onSurfaceVarient: #48454e;
+  --surfaceContainer: #f1ecf4;
+  --surfaceContainer-low: #f7f2fa;
+  --surfaceContainer-high: #ece6ee;
+
+  --inverseSurface: #312f35;
+  --inverseOnSurface: #f4eff7;
+  --outlineVarient: #cac4cf;
+
+  --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 6px 2px rgba(0, 0, 0, 0.15);
+}
+
+.dark {
+  --primary: #cbbeff;
+  --onPrimary: #33275e;
+  --primaryContainer: #493e76;
+  --onPrimaryContainer: #e7deff;
+
+  --secondary: #cac3dc;
+  --onSecondary: #322e41;
+  --secondaryContainer: #484458;
+  --onSecondaryContainer: #e6dff9;
+
+  --tertiary: #eeb8cb;
+  --onTertiary: #492534;
+
+  --surface: #141318;
+  --onSurface: #e6e1e9;
+  --onSurfaceVarient: #cac4cf;
+  --surfaceContainer: #201f24;
+  --surfaceContainer-low: #1c1b20;
+  --surfaceContainer-high: #2b292f;
+
+  --inverseSurface: #e6e1e9;
+  --inverseOnSurface: #312f35;
+  --outlineVarient: #48454e;
+
+  --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 6px 2px rgba(0, 0, 0, 0.15);
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-onPrimary: var(--onPrimary);
+  --color-primaryContainer: var(--primaryContainer);
+  --color-onPrimaryContainer: var(--onPrimaryContainer);
+
+  --color-secondary: var(--secondary);
+  --color-onSecondary: var(--onSecondary);
+  --color-secondaryContainer: var(--secondaryContainer);
+  --color-onSecondaryContainer: var(--onSecondaryContainer);
+
+  --color-tertiary: var(--tertiary);
+  --color-onTertiary: var(--onTertiary);
+
+  --color-surface: var(--surface);
+  --color-onSurface: var(--onSurface);
+  --color-onSurfaceVarient: var(--onSurfaceVarient);
+  --color-surfaceContainer: var(--surfaceContainer);
+  --color-surfaceContainer-low: var(--surfaceContainer-low);
+  --color-surfaceContainer-high: var(--surfaceContainer-high);
+
+  --color-inverseOnSurface: var(--inverseOnSurface);
+  --color-inverseSurface: var(--inverseSurface);
+  --color-outlineVarient: var(--outlineVarient);
+
+  --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 1px 6px 2px rgba(0, 0, 0, 0.15);
+
+  --radius-medium: 12px;
+}
+
+@layer utilities {
+  .text-brand {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .text-plain {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .text-display-large {
+    font-weight: 400;
+    font-size: 57px;
+    line-height: 64px;
+    letter-spacing: -0.25px;
+  }
+
+  .text-display-medium {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 52px;
+    letter-spacing: 0;
+  }
+
+  .text-display-small {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0;
+  }
+
+  .text-headline-large {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+
+  .text-headline-medium {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0;
+  }
+
+  .text-headline-small {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  .text-title-large {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+
+  .text-title-medium {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+
+  .text-title-small {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  .text-label-large {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  .text-label-medium {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .text-label-small {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+  }
+  .text-body-large {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .text-body-medium {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+
+  .text-body-small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+}
