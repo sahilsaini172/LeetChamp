@@ -1,6 +1,7 @@
-import { ArrowUpDown, Filter, SortAsc } from "lucide-react";
+import { ArrowUpDown, Filter } from "lucide-react";
 import IconButton from "../components/buttons/Iconbutton";
 import SearchBar from "../components/Search/SearchBar";
+import ProblemRow from "../ProblemItem";
 
 export default function Home() {
   return (
@@ -17,22 +18,9 @@ export default function Home() {
             </IconButton>
           </div>
         </div>
-        <div className="table w-full *:odd:bg-surfaceContainer-low **:p-4 mt-4">
-          <div className="table-row-group">
-            <div className="table-cell">completed</div>
-            <div className="table-cell">Sr.</div>
-            <div className="table-cell">question name</div>
-            <div className="table-cell">difficulty</div>
-            <div className="table-cell">status</div>
-          </div>
-          <div className="table-row-group">
-            <div className="table-cell"></div>
-            <div className="table-cell">1.</div>
-            <div className="table-cell">Two Sum</div>
-            <div className="table-cell">Easy</div>
-            <div className="table-cell">Locked</div>
-          </div>
-        </div>
+        <section className="text-sm w-full">
+          <ProblemRow />
+        </section>
       </section>
     </div>
   );

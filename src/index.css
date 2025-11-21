@@ -32,6 +32,10 @@
   --inverseOnSurface: #f4eff7;
   --outlineVarient: #cac4cf;
 
+  --easy: #4c662b;
+  --medium: #6d5e0f;
+  --hard: #8f4c38;
+
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
   --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
@@ -63,6 +67,10 @@
   --inverseOnSurface: #312f35;
   --outlineVarient: #48454e;
 
+  --easy: #b1d18a;
+  --medium: #dbc66e;
+  --hard: #ffb5a0;
+  
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
   --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
@@ -93,6 +101,9 @@
   --color-inverseOnSurface: var(--inverseOnSurface);
   --color-inverseSurface: var(--inverseSurface);
   --color-outlineVarient: var(--outlineVarient);
+  --color-easy: var(--easy);
+  --color-medium: var(--medium);
+  --color-hard: var(--hard);
 
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
