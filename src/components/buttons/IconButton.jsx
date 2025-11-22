@@ -1,4 +1,4 @@
-export default function IconButton({ onClick, children, className = "" }) {
+export default function IcnButton({ onClick, children, className = "" }) {
   return (
     <div
       onClick={onClick}
