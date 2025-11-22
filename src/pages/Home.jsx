@@ -1,8 +1,9 @@
 import { ArrowUpDown, Filter } from "lucide-react";
-import IconButton from "../components/buttons/Iconbutton";
+
 import SearchBar from "../components/Search/SearchBar";
 import ProblemRow from "../ProblemItem";
 import { useEffect, useState } from "react";
+import IconButton from "../components/buttons/Iconbutton";
 
 export default function Home() {
   const [width, setWidth] = useState(0);
@@ -21,10 +22,10 @@ export default function Home() {
           <SearchBar />
           <div className="flex gap-4">
             <IconButton>
-              <Filter />
+              <Filter/>
             </IconButton>
             <IconButton>
-              <ArrowUpDown />
+              <ArrowUpDown/>
             </IconButton>
           </div>
         </div>
