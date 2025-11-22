@@ -21,6 +21,11 @@
   --tertiary: #7d5262;
   --onTertiary: #ffffff;
 
+  --error: #ba1a1a;
+  --onError: #ffffff;
+  --errorContainer: #ffdad6;
+  --onErrorContainer: #93000a;
+
   --surface: #fdf7ff;
   --onSurface: #1c1b20;
   --onSurfaceVarient: #48454e;
@@ -59,6 +64,11 @@
   --tertiary: #eeb8cb;
   --onTertiary: #492534;
 
+  --error: #ffb4ab;
+  --onError: #690005;
+  --errorContainer: #93000a;
+  --onErrorContainer: #ffdad6;
+
   --surface: #141318;
   --onSurface: #e6e1e9;
   --onSurfaceVarient: #cac4cf;
@@ -76,7 +86,7 @@
   --hard: #ffb4a8;
 
   --invert: #ffffff;
-  
+
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
   --shadow-elevation2: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
@@ -96,6 +106,11 @@
 
   --color-tertiary: var(--tertiary);
   --color-onTertiary: var(--onTertiary);
+  
+  --color-error: var(--error);
+  --color-onError: var(--onError);
+  --color-errorContainer: var(--errorContainer);
+  --color-onErrorContainer: var(--onErrorContainer);
 
   --color-surface: var(--surface);
   --color-onSurface: var(--onSurface);

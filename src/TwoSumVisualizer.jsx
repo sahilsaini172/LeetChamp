@@ -1,6 +1,9 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { problemData } from "./data/questions";
+import StandardButton from "./components/buttons/StandardButton";
+import TonalButton from "./components/buttons/TonalButton";
+import FilledTextField from "./components/textFields/FilledTextFiedl";
 
 function TwoSumVisualizer({ width }) {
   const containerRef = useRef(null);
@@ -208,7 +211,6 @@ function TwoSumVisualizer({ width }) {
         })}
 
         {/* Connection line when comparing */}
-        {/* Connection line when comparing */}
         {currentI >= 0 && currentJ >= 0 && (
           <>
             <svg
@@ -252,75 +254,34 @@ function TwoSumVisualizer({ width }) {
           <span>Solution Found</span>
         </div>
       </div>
-      <div className="flex items-center"></div>
-      <div style={{ marginBottom: "20px" }}>
-        <button
-          onClick={runVisualization}
+      <div className="flex  flex-col gap-2 flex-wrap">
+        <div className="flex items-center gap-2">
+          <StandardButton
+            disabled={running}
+            text={running ? "Running..." : "Start"}
+            onClick={runVisualization}
+            className="grow"
+          />
+          <StandardButton
+            disabled={!running}
+            text={"Stop"}
+            onClick={stopVisualization}
+            style="destruction"
+            className=""
+          />
+        </div>
+        <TonalButton
           disabled={running}
-          style={{
-            padding: "12px 24px",
-            marginRight: "10px",
-            fontSize: "16px",
-            backgroundColor: running ? "#95a5a6" : "#3498db",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: running ? "not-allowed" : "pointer",
-            fontWeight: "bold",
-          }}
-        >
-          {running ? "Running..." : "Start Visualization"}
-        </button>
-
-        <button
-          onClick={stopVisualization}
-          disabled={!running}
-          style={{
-            padding: "12px 24px",
-            marginRight: "10px",
-            fontSize: "16px",
-            backgroundColor: !running ? "#95a5a6" : "#e74c3c",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: !running ? "not-allowed" : "pointer",
-            fontWeight: "bold",
-          }}
-        >
-          Stop
-        </button>
-
-        <button
+          text={"Generate Array"}
           onClick={generateArray}
-          disabled={running}
-          style={{
-            padding: "12px 24px",
-            marginRight: "10px",
-            fontSize: "16px",
-            backgroundColor: running ? "#95a5a6" : "#27ae60",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: running ? "not-allowed" : "pointer",
-            fontWeight: "bold",
-          }}
-        >
-          Generate Array
-        </button>
-
-        <input
+        />
+        <FilledTextField
           type="number"
           value={target}
+          placeholder="Target"
+          supporting="Enter a Target value"
           onChange={(e) => setTarget(Number(e.target.value))}
           disabled={running}
-          style={{
-            padding: "12px",
-            fontSize: "16px",
-            width: "100px",
-            borderRadius: "5px",
-            border: "2px solid #3498db",
-          }}
-          placeholder="Target"
         />
       </div>
     </div>

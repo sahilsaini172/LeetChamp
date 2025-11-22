@@ -29,9 +29,7 @@ export default function Home() {
             </IconButton>
           </div>
         </div>
-        <section className="text-sm w-full mt-4">
-          <TwoSumVisualizer width={width} />
-        </section>
+        <ProblemRow />
       </section>
     </div>
   );
