@@ -2,7 +2,6 @@ import { ArrowUpDown, Filter } from "lucide-react";
 import IconButton from "../components/buttons/Iconbutton";
 import SearchBar from "../components/Search/SearchBar";
 import ProblemRow from "../ProblemItem";
-import TwoSumVisualizer from "../TwoSumVisualizer";
 import { useEffect, useState } from "react";
 
 export default function Home() {
