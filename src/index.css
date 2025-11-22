@@ -27,6 +27,7 @@
   --surfaceContainer: #f1ecf4;
   --surfaceContainer-low: #f7f2fa;
   --surfaceContainer-high: #ece6ee;
+  --surfaceContainer-highest: #e6e1e9;
 
   --inverseSurface: #312f35;
   --inverseOnSurface: #f4eff7;
@@ -35,6 +36,8 @@
   --easy: #406836;
   --medium: #815512;
   --hard: #904b40;
+
+  --invert: #000000;
 
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -62,6 +65,7 @@
   --surfaceContainer: #201f24;
   --surfaceContainer-low: #1c1b20;
   --surfaceContainer-high: #2b292f;
+  --surfaceContainer-highest: #36343a;
 
   --inverseSurface: #e6e1e9;
   --inverseOnSurface: #312f35;
@@ -70,6 +74,8 @@
   --easy: #a5d395;
   --medium: #f7bb70;
   --hard: #ffb4a8;
+
+  --invert: #ffffff;
   
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);
@@ -97,6 +103,7 @@
   --color-surfaceContainer: var(--surfaceContainer);
   --color-surfaceContainer-low: var(--surfaceContainer-low);
   --color-surfaceContainer-high: var(--surfaceContainer-high);
+  --color-surfaceContainer-highest: var(--surfaceContainer-highest);
 
   --color-inverseOnSurface: var(--inverseOnSurface);
   --color-inverseSurface: var(--inverseSurface);
@@ -104,6 +111,8 @@
   --color-easy: var(--easy);
   --color-medium: var(--medium);
   --color-hard: var(--hard);
+
+  --color-invert: var(--invert);
 
   --shadow-elevation1: 0 1px 2px 0 rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.15);

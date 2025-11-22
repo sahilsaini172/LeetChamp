@@ -1,7 +1,12 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
+import { problemData } from "./data/questions";
 
-function TwoSumVisualizer() {
-  const [nums, setNums] = useState([11, 15, 2, 7]);
+function TwoSumVisualizer({ width }) {
+  const containerRef = useRef(null);
+  const { id } = useParams();
+  const problem = problemData[id];
+  const [nums, setNums] = useState([11, 15, 2, 7, 6]);
   const [target, setTarget] = useState(9);
   const [running, setRunning] = useState(false);
   const [currentI, setCurrentI] = useState(-1);
@@ -12,12 +17,8 @@ function TwoSumVisualizer() {
 
   const animationRef = useRef(null);
 
-  const width = 800;
-  const height = 500;
-  const padding = 60;
-  const barWidth = 80;
-  const spacing = 40;
-  const maxHeight = height - 200;
+  const height = 300;
+  const maxHeight = height - 100;
 
   // Two Sum algorithm generator
   function* twoSumGenerator(nums, target) {
@@ -67,10 +68,10 @@ function TwoSumVisualizer() {
 
   // Get bar color based on state
   const getBarColor = (index) => {
-    if (result.includes(index)) return "#2ecc71"; // Green - found
-    if (index === currentI) return "#e74c3c"; // Red - i pointer
-    if (index === currentJ) return "#f39c12"; // Orange - j pointer
-    return "#3498db"; // Blue - default
+    if (result.includes(index)) return "easy"; // Green - found
+    if (index === currentI) return "hard"; // Red - i pointer
+    if (index === currentJ) return "medium"; // Orange - j pointer
+    return "blue-400"; // Blue - default
   };
 
   // Get bar label
@@ -157,10 +158,101 @@ function TwoSumVisualizer() {
   }, []);
 
   return (
-    <div className="p-4 flex flex-col">
-      <h2 className="text-title-medium">Two Sum Algorithm Visualizer</h2>
+    <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
+      <h2 className="text-headline-medium">Two Sum</h2>
 
-      {/* Controls */}
+      {/* Status */}
+      <div className="p-2 bg-surfaceContainer text-label-large rounded-md">
+        {status}
+      </div>
+
+      {/* SVG Visualization */}
+      <div
+        className={`h-[300px] gap-2 pb-4 rounded-lg bg-surfaceContainer-highest flex items-end relative`}
+        style={{ width: "380px" }}
+      >
+        {/* Title */}
+        <p className="text-center top-4 left-[50%] -translate-x-[50%] absolute text-label-medium">
+          Target: {target} | Steps: {stepCount}
+        </p>
+
+        {/* Array visualization */}
+        {nums.map((value, index) => {
+          const maxValue = Math.max(...nums);
+          const barHeight = (value / maxValue) * maxHeight;
+
+          return (
+            <g key={index}>
+              {/* Bar */}
+              <div
+                className={`p-2 text-label-small mx-4 w-full flex flex-col items-center rounded-sm justify-end text-invert relative bg-${getBarColor(
+                  index
+                )}`}
+                style={{
+                  height: barHeight,
+                }}
+              >
+                {/* Value text */}
+                <span className="font-black">{value}</span>
+
+                {/* Index label */}
+                <span className="font-medium">[{index}]</span>
+
+                {/* Pointer label */}
+                <span className={`absolute -top-8 text-${getBarColor(index)}`}>
+                  {getBarLabel(index)}
+                </span>
+              </div>
+            </g>
+          );
+        })}
+
+        {/* Connection line when comparing */}
+        {/* Connection line when comparing */}
+        {currentI >= 0 && currentJ >= 0 && (
+          <>
+            <svg
+              className="absolute top-0 left-0 w-full h-full pointer-events-none"
+              style={{ width: "380px", height: "300px" }}
+            >
+              <line
+                x1={currentI * (60 + 16) + 60 / 2}
+                y1={height - 100}
+                x2={currentJ * (60 + 16) + 60 / 2}
+                y2={height - 100}
+                stroke="#e74c3c"
+                strokeWidth="2"
+                strokeDasharray="5,5"
+              />
+            </svg>
+            <span className="absolute top-12 left-[50%] -translate-x-[50%]">
+              {nums[currentI]} + {nums[currentJ]} ={" "}
+              {nums[currentI] + nums[currentJ]}
+            </span>
+          </>
+        )}
+      </div>
+
+      {/* Legend */}
+      <div className="flex items-center gap-2 w-full">
+        <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer gap-1 text-label-small">
+          <div className="size-4 bg-blue-400 rounded-full"></div>
+          <span>Unvisited</span>
+        </div>
+        <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer gap-1 text-label-small">
+          <div className="size-4 bg-hard rounded-full"></div>
+          <span>Pointer i</span>
+        </div>
+        <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer gap-1 text-label-small">
+          <div className="size-4 bg-medium rounded-full"></div>
+          <span>Pointer j</span>
+        </div>
+        <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer gap-1 text-label-small">
+          <div className="size-4 bg-easy rounded-full"></div>
+          <span>Solution Found</span>
+        </div>
+      </div>
+      <div className="flex items-center"></div>
       <div style={{ marginBottom: "20px" }}>
         <button
           onClick={runVisualization}
@@ -230,188 +322,6 @@ function TwoSumVisualizer() {
           }}
           placeholder="Target"
         />
-      </div>
-
-      {/* Status */}
-      <div
-        style={{
-          padding: "15px",
-          backgroundColor: "#ecf0f1",
-          borderRadius: "5px",
-          marginBottom: "20px",
-          fontSize: "16px",
-          fontWeight: "bold",
-          color: "#2c3e50",
-        }}
-      >
-        {status}
-      </div>
-
-      {/* SVG Visualization */}
-      <svg
-        width={width}
-        height={height}
-        style={{ border: "2px solid #bdc3c7", borderRadius: "8px" }}
-      >
-        <rect width={width} height={height} fill="#f8f9fa" />
-
-        {/* Title */}
-        <text
-          x={width / 2}
-          y={30}
-          textAnchor="middle"
-          fontSize="20"
-          fontWeight="bold"
-          fill="#2c3e50"
-        >
-          Target: {target} | Steps: {stepCount}
-        </text>
-
-        {/* Array visualization */}
-        {nums.map((value, index) => {
-          const maxValue = Math.max(...nums);
-          const barHeight = (value / maxValue) * maxHeight;
-          const x = padding + index * (barWidth + spacing);
-          const y = height - padding - barHeight;
-
-          return (
-            <g key={index}>
-              {/* Bar */}
-              <rect
-                x={x}
-                y={y}
-                width={barWidth}
-                height={barHeight}
-                fill={getBarColor(index)}
-                stroke="#2c3e50"
-                strokeWidth="3"
-                rx="5"
-              />
-
-              {/* Value text */}
-              <text
-                x={x + barWidth / 2}
-                y={y + barHeight / 2}
-                textAnchor="middle"
-                dominantBaseline="middle"
-                fontSize="24"
-                fontWeight="bold"
-                fill="white"
-              >
-                {value}
-              </text>
-
-              {/* Index label */}
-              <text
-                x={x + barWidth / 2}
-                y={height - padding + 25}
-                textAnchor="middle"
-                fontSize="16"
-                fill="#2c3e50"
-                fontWeight="bold"
-              >
-                [{index}]
-              </text>
-
-              {/* Pointer label */}
-              <text
-                x={x + barWidth / 2}
-                y={y - 15}
-                textAnchor="middle"
-                fontSize="20"
-                fontWeight="bold"
-                fill={getBarColor(index)}
-              >
-                {getBarLabel(index)}
-              </text>
-            </g>
-          );
-        })}
-
-        {/* Connection line when comparing */}
-        {currentI >= 0 && currentJ >= 0 && (
-          <>
-            <line
-              x1={padding + currentI * (barWidth + spacing) + barWidth / 2}
-              y1={height - padding - 50}
-              x2={padding + currentJ * (barWidth + spacing) + barWidth / 2}
-              y2={height - padding - 50}
-              stroke="#e74c3c"
-              strokeWidth="4"
-              strokeDasharray="5,5"
-            />
-            <text
-              x={
-                (padding +
-                  currentI * (barWidth + spacing) +
-                  padding +
-                  currentJ * (barWidth + spacing) +
-                  barWidth) /
-                2
-              }
-              y={height - padding - 60}
-              textAnchor="middle"
-              fontSize="18"
-              fontWeight="bold"
-              fill="#e74c3c"
-            >
-              {nums[currentI]} + {nums[currentJ]} ={" "}
-              {nums[currentI] + nums[currentJ]}
-            </text>
-          </>
-        )}
-      </svg>
-
-      {/* Legend */}
-      <div style={{ marginTop: "20px", display: "flex", gap: "20px" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              width: "30px",
-              height: "30px",
-              backgroundColor: "#3498db",
-              marginRight: "10px",
-              borderRadius: "5px",
-            }}
-          ></div>
-          <span>Unvisited</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              width: "30px",
-              height: "30px",
-              backgroundColor: "#e74c3c",
-              marginRight: "10px",
-              borderRadius: "5px",
-            }}
-          ></div>
-          <span>Pointer i</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              width: "30px",
-              height: "30px",
-              backgroundColor: "#f39c12",
-              marginRight: "10px",
-              borderRadius: "5px",
-            }}
-          ></div>
-          <span>Pointer j</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              width: "30px",
-              height: "30px",
-              backgroundColor: "#2ecc71",
-              marginRight: "10px",
-              borderRadius: "5px",
-            }}
-          ></div>
-          <span>Solution Found</span>
-        </div>
       </div>
     </div>
   );

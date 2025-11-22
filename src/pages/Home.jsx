@@ -2,8 +2,19 @@ import { ArrowUpDown, Filter } from "lucide-react";
 import IconButton from "../components/buttons/Iconbutton";
 import SearchBar from "../components/Search/SearchBar";
 import ProblemRow from "../ProblemItem";
+import TwoSumVisualizer from "../TwoSumVisualizer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth - 32);
+    }
+
+    window.addEventListener("resize", handleResize);
+    console.log(width);
+  });
   return (
     <div className="flex flex-col">
       <section className="p-4">
@@ -18,8 +29,8 @@ export default function Home() {
             </IconButton>
           </div>
         </div>
-        <section className="text-sm w-full">
-          <ProblemRow />
+        <section className="text-sm w-full mt-4">
+          <TwoSumVisualizer width={width} />
         </section>
       </section>
     </div>

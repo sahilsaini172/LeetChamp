@@ -7,13 +7,10 @@ export default function ProblemItem() {
     switch (str) {
       case "Hard":
         return "text-hard";
-        break;
       case "Medium":
         return "text-medium";
-        break;
       case "Easy":
         return "text-easy";
-        break;
       default:
         return "text-white";
     }
