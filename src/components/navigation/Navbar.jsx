@@ -1,6 +1,6 @@
 import { Menu, SidebarOpenIcon } from "lucide-react";
 import DarkModeToggle from "../../DarkModeToggle";
-import IcnButton from "../buttons/Iconbutton";
+import IcnButton from "../buttons/IcnButton";
 
 export default function Navbar({ sidebarStatus = false }) {
   return (

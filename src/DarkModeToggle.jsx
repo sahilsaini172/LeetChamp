@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import IconButton from "./components/buttons/Iconbutton";
+import IconButton from "./components/buttons/IcnButton";
 import { Moon, Sun } from "lucide-react";
 
 const DarkModeToggle = () => {
