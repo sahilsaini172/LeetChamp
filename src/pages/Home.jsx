@@ -3,6 +3,8 @@ import SearchBar from "../components/Search/SearchBar";
 import ProblemRow from "../ProblemItem";
 import { useEffect, useState } from "react";
 import IcnButton from "../components/buttons/IcnButton";
+import AddTwoNumbersVisualizer from "../Solutions/AddTwoNumberVisualizer";
+import AddTwoNumberOg from "../Solutions/AddTwoNumberOg";
 
 export default function Home() {
   const [width, setWidth] = useState(0);
@@ -28,7 +30,9 @@ export default function Home() {
             </IcnButton>
           </div>
         </div>
-        <ProblemRow />
+        <div className="flex">
+          <ProblemRow/>
+        </div>
       </section>
     </div>
   );

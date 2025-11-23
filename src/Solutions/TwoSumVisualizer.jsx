@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { problemData } from "./data/questions";
-import StandardButton from "./components/buttons/StandardButton";
-import TonalButton from "./components/buttons/TonalButton";
-import FilledTextField from "./components/textFields/FilledTextFiedl";
+import { problemData } from "../data/questions";
+import StandardButton from "../components/buttons/StandardButton";
+import TonalButton from "../components/buttons/TonalButton";
+import FilledTextField from "../components/textFields/FilledTextField";
 
 function TwoSumVisualizer({ width }) {
   const containerRef = useRef(null);
@@ -172,7 +172,6 @@ function TwoSumVisualizer({ width }) {
       {/* SVG Visualization */}
       <div
         className={`h-[300px] gap-2 pb-4 rounded-lg bg-surfaceContainer-highest flex items-end relative`}
-        style={{ width: "380px" }}
       >
         {/* Title */}
         <p className="text-center top-4 left-[50%] -translate-x-[50%] absolute text-label-medium">

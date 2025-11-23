@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { problemData } from "../data/questions";
-import TwoSumVisualizer from "../TwoSumVisualizer";
+import TwoSumVisualizer from "../Solutions/TwoSumVisualizer";
+import AddTwoNumbersVisualizer from "../Solutions/AddTwoNumberVisualizer";
 
 export default function Problem() {
   const { id } = useParams();
@@ -10,6 +11,8 @@ export default function Problem() {
     switch (id) {
       case "1":
         return <TwoSumVisualizer />;
+      case "2":
+        return <AddTwoNumbersVisualizer />;
       default:
         return <div>Problem {id} not found.</div>;
     }
