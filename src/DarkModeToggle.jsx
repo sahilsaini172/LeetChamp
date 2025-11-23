@@ -26,6 +26,7 @@ const DarkModeToggle = () => {
 
   return (
     <button
+      name="Theme toggle"
       onClick={toggleDark}
       className="transition-all ease-in duration-150"
     >
