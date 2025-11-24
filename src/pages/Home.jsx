@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex">
-          <ProblemRow/>
+          <ProblemRow />
         </div>
       </section>
     </div>

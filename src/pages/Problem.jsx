@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { problemData } from "../data/questions";
 import TwoSumVisualizer from "../Solutions/TwoSumVisualizer";
 import AddTwoNumbersVisualizer from "../Solutions/AddTwoNumberVisualizer";
+import LongestSubstringVisualizer from "../Solutions/LongestSubstringVisualizer";
 
 export default function Problem() {
   const { id } = useParams();
@@ -13,6 +14,8 @@ export default function Problem() {
         return <TwoSumVisualizer />;
       case "2":
         return <AddTwoNumbersVisualizer />;
+      case "3":
+        return <LongestSubstringVisualizer />;
       default:
         return <div>Problem {id} not found.</div>;
     }

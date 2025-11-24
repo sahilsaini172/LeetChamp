@@ -5,6 +5,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  height: 0;
+}
+
+
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -106,7 +113,7 @@
 
   --color-tertiary: var(--tertiary);
   --color-onTertiary: var(--onTertiary);
-  
+
   --color-error: var(--error);
   --color-onError: var(--onError);
   --color-errorContainer: var(--errorContainer);
