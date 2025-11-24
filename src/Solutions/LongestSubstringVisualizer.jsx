@@ -462,7 +462,7 @@ function LongestSubstringVisualizer() {
         </div>
         <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer-highest gap-1 text-label-small">
           <div className="size-4 bg-inverseSurface rounded-full"></div>
-          <span>Visisted</span>
+          <span>Visited</span>
         </div>
       </div>
       {/* Controls */}
