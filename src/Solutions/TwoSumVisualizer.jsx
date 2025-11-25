@@ -1,14 +1,10 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { problemData } from "../data/questions";
 import StandardButton from "../components/buttons/StandardButton";
 import TonalButton from "../components/buttons/TonalButton";
 import FilledTextField from "../components/textFields/FilledTextField";
 
 function TwoSumVisualizer({ width }) {
-  const containerRef = useRef(null);
-  const { id } = useParams();
-  const problem = problemData[id];
   const [nums, setNums] = useState([11, 15, 2, 7, 6]);
   const [target, setTarget] = useState(9);
   const [running, setRunning] = useState(false);
@@ -17,7 +13,6 @@ function TwoSumVisualizer({ width }) {
   const [result, setResult] = useState([]);
   const [status, setStatus] = useState('Click "Start" to begin visualization');
   const [stepCount, setStepCount] = useState(0);
-
   const animationRef = useRef(null);
 
   const height = 300;

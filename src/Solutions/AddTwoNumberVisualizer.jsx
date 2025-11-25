@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import StandardButton from "../components/buttons/StandardButton";
 import TonalButton from "../components/buttons/TonalButton";
 import FilledTextField from "../components/textFields/FilledTextField";
@@ -24,12 +24,8 @@ function AddTwoNumbersVisualizer() {
   const [currentNum, setCurrentNum] = useState(null);
   const [stepNumber, setStepNumber] = useState(0);
   const [status, setStatus] = useState('Click "Start" to add the linked lists');
-  const [finalResult, setFinalResult] = useState(null);
 
   const animationRef = useRef(null);
-
-  const width = 1100;
-  const height = 750;
 
   // Convert array to linked list
   const arrayToList = (arr) => {

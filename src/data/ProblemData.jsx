@@ -1,27 +1,38 @@
+import TwoSumVisualizer from "../Solutions/TwoSumVisualizer";
+import AddTwoNumbersVisualizer from "../Solutions/AddTwoNumberVisualizer";
+import LongestSubstringVisualizer from "../Solutions/LongestSubstringVisualizer";
+import MedianSortedArraysVisualizer from "../Solutions/MedianSortedArraysVisualizer";
+import PalindromeNumberVisualizer from "../Solutions/PalindromeNumberVisualizer";
+import RomanToIntVisualizer from "../Solutions/RomanToIntVisualizer";
+
 export const problemData = {
   1: {
     title: "Two Sum",
     description:
       "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
     difficulty: "Easy",
+    visualizer: <TwoSumVisualizer />,
   },
   2: {
     title: "Add Two Numbers",
     description:
       "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
     difficulty: "Medium",
+    visualizer: <AddTwoNumbersVisualizer />,
   },
   3: {
     title: "Longest Substring Without Repeating Characters",
     description:
       "Given a string s, find the length of the longest substring without repeating characters.",
     difficulty: "Medium",
+    visualizer: <LongestSubstringVisualizer />,
   },
   4: {
     title: "Median of Two Sorted Arrays",
     description:
       "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).",
     difficulty: "Hard",
+    visualizer: <MedianSortedArraysVisualizer />,
   },
   5: {
     title: "Longest Palindromic Substring",
@@ -52,6 +63,7 @@ export const problemData = {
     description:
       "Given an integer x, return true if x is a palindrome, and false otherwise.",
     difficulty: "Easy",
+    visualizer: <PalindromeNumberVisualizer />,
   },
   10: {
     title: "Regular Expression Matching",
@@ -76,6 +88,7 @@ export const problemData = {
     description:
       "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Given a roman numeral, convert it to an integer.",
     difficulty: "Easy",
+    visualizer: <RomanToIntVisualizer />,
   },
   14: {
     title: "Longest Common Prefix",

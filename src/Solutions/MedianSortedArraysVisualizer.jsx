@@ -20,12 +20,8 @@ function MedianSortedArraysVisualizer() {
   const [status, setStatus] = useState('Click "Start" to find median');
   const [finalResult, setFinalResult] = useState(null);
   const [isEven, setIsEven] = useState(false);
-  const [targetIndex, setTargetIndex] = useState(0);
 
   const animationRef = useRef(null);
-
-  const width = 1100;
-  const height = 900;
 
   // Parse input
   const parseInput = (input) => {

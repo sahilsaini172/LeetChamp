@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { problemData } from "./data/questions";
+import { problemData } from "./data/ProblemData";
 
 export default function ProblemItem() {
   const navigate = useNavigate();

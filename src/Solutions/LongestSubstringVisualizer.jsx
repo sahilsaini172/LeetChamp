@@ -1,5 +1,5 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import  { useState, useCallback, useRef, useEffect } from "react";
 import FilledTextField from "../components/textFields/FilledTextField";
 import StandardButtonS from "../components/buttons/StandardButton";
 import TonalButton from "../components/buttons/TonalButton";
@@ -22,9 +22,6 @@ function LongestSubstringVisualizer() {
   const [operation, setOperation] = useState("");
 
   const animationRef = useRef(null);
-
-  const width = 1100;
-  const height = 800;
 
   // Longest substring algorithm generator
   function* longestSubstringGenerator(s) {
