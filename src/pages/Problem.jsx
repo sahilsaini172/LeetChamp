@@ -3,6 +3,7 @@ import { problemData } from "../data/questions";
 import TwoSumVisualizer from "../Solutions/TwoSumVisualizer";
 import AddTwoNumbersVisualizer from "../Solutions/AddTwoNumberVisualizer";
 import LongestSubstringVisualizer from "../Solutions/LongestSubstringVisualizer";
+import MedianSortedArraysVisualizer from "../Solutions/MedianSortedArraysVisualizer";
 
 export default function Problem() {
   const { id } = useParams();
@@ -16,6 +17,8 @@ export default function Problem() {
         return <AddTwoNumbersVisualizer />;
       case "3":
         return <LongestSubstringVisualizer />;
+      case "4":
+        return <MedianSortedArraysVisualizer />;
       default:
         return <div>Problem {id} not found.</div>;
     }

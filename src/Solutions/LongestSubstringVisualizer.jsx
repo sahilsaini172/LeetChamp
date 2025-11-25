@@ -299,7 +299,7 @@ function LongestSubstringVisualizer() {
 
       {/* SVG Visualization */}
       <div
-        className={`gap-2 p-4 rounded-lg bg-surfaceContainer-highest flex flex-col relative w[380px] overflow-hidden`}
+        className={`gap-2 p-4 rounded-lg bg-surfaceContainer-highest flex flex-col relative overflow-hidden`}
       >
         {/* Title */}
         <p className="text-center text-label-medium">
