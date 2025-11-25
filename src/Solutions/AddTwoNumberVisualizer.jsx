@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import StandardButton from "../components/buttons/StandardButton";
 import TonalButton from "../components/buttons/TonalButton";
 import FilledTextField from "../components/textFields/FilledTextField";
@@ -17,6 +17,7 @@ function AddTwoNumbersVisualizer() {
   const [running, setRunning] = useState(false);
   const [l1Array, setL1Array] = useState([]);
   const [l2Array, setL2Array] = useState([]);
+  const [finalResult, setFinalResult] = useState(null);
   const [resultArray, setResultArray] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [carry, setCarry] = useState(0);

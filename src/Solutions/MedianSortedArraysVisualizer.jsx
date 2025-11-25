@@ -10,6 +10,7 @@ function MedianSortedArraysVisualizer() {
   const [running, setRunning] = useState(false);
   const [nums1, setNums1] = useState([]);
   const [nums2, setNums2] = useState([]);
+  const [targetIndex, setTargetIndex] = useState(0);
   const [merged, setMerged] = useState([]);
   const [p1, setP1] = useState(0);
   const [p2, setP2] = useState(0);
