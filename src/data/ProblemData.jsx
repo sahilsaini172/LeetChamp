@@ -4,6 +4,7 @@ import LongestSubstringVisualizer from "../Solutions/LongestSubstringVisualizer"
 import MedianSortedArraysVisualizer from "../Solutions/MedianSortedArraysVisualizer";
 import PalindromeNumberVisualizer from "../Solutions/PalindromeNumberVisualizer";
 import RomanToIntVisualizer from "../Solutions/RomanToIntVisualizer";
+import LongestPalindromeVisualizer from "../Solutions/LongestPalidromeVisualizer";
 
 export const problemData = {
   1: {
@@ -39,6 +40,7 @@ export const problemData = {
     description:
       "Given a string s, return the longest palindromic substring in s.",
     difficulty: "Medium",
+    visualizer: <LongestPalindromeVisualizer />,
   },
   6: {
     title: "Zigzag Conversion",

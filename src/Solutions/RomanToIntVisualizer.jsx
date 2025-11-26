@@ -238,37 +238,6 @@ function RomanToIntVisualizer() {
     <div className="flex flex-col gap-2 w-full text-onSurface **:ease-in **:duration-150 ease-in duration-150">
       <h2 className="text-headline-medium">Roman to Integer Visualizer</h2>
 
-      {/* Controls */}
-      <div className="flex flex-col gap-2 w-full">
-        <div className="flex flex-col items-center gap-2 w-full">
-          <FilledTextField
-            type="text"
-            value={inputRoman}
-            onChange={(e) => setInputRoman(e.target.value.toUpperCase())}
-            className="w-full"
-            placeholder="Enter Roman Numbers"
-            label={inputRoman}
-            supportingText={false}
-            disabled={running}
-          />
-        </div>
-        <div className="flex items-center gap-2">
-          <StandardButtonS
-            text={running ? "Coverting..." : "Start Conversion"}
-            disabled={running}
-            onClick={runVisualization}
-            className="grow"
-          />
-          <TonalButton
-            text="Stop"
-            onClick={stopVisualization}
-            disabled={!running}
-            style="destruction"
-          />
-          <TonalButton text="Reset" onClick={reset} disabled={running} />
-        </div>
-      </div>
-
       {/* Status */}
       <div className="p-2 bg-surfaceContainer text-label-large rounded-md">
         Step {stepNumber}: {status}
@@ -437,6 +406,37 @@ function RomanToIntVisualizer() {
         <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer-highest gap-1 text-label-small">
           <div className="size-4 bg-surfaceContainer rounded-full"></div>
           <span>Visited</span>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col items-center gap-2 w-full">
+          <FilledTextField
+            type="text"
+            value={inputRoman}
+            onChange={(e) => setInputRoman(e.target.value.toUpperCase())}
+            className="w-full"
+            placeholder="Enter Roman Numbers"
+            label={inputRoman}
+            supportingText={false}
+            disabled={running}
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <StandardButtonS
+            text={running ? "Coverting..." : "Start Conversion"}
+            disabled={running}
+            onClick={runVisualization}
+            className="grow"
+          />
+          <TonalButton
+            text="Stop"
+            onClick={stopVisualization}
+            disabled={!running}
+            style="destruction"
+          />
+          <TonalButton text="Reset" onClick={reset} disabled={running} />
         </div>
       </div>
 
