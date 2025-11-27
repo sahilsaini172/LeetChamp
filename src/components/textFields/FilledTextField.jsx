@@ -15,6 +15,8 @@ export default function FilledTextField({
   supporting = "Supporting text",
   onChange,
   disabled,
+  min,
+  max,
 }) {
   const [showLabel, setShowLabel] = useState(label);
   return (
@@ -35,6 +37,8 @@ export default function FilledTextField({
           </span>
           {showLabel && (
             <input
+              min={min}
+              max={max}
               onChange={onChange}
               type={type}
               name=""
