@@ -31,7 +31,7 @@ export default function FilledTextField({
             {leading}
           </span>
         )}
-        <div className={`flex flex-col ${!leadingIcon ? "px-4" : ""}`}>
+        <div className={`flex flex-col w-full ${!leadingIcon ? "px-4" : ""}`}>
           <span className={label ? "text-primary" : "text-onSurfaceVarient"}>
             {placeholder}
           </span>
@@ -45,7 +45,7 @@ export default function FilledTextField({
               id=""
               placeholder={placeholder}
               value={value}
-              className={`flex-1 text-onSurfaceVarient text-body-large outline-0`}
+              className={`flex-1 text-onSurfaceVarient text-body-large outline-0 w-full`}
             />
           )}
         </div>

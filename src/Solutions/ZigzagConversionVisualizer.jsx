@@ -266,7 +266,7 @@ function ZigzagConversionVisualizer() {
 
       {/* Controls */}
       <div className="flex flex-col gap-2 w-full">
-        <div className="flex items-center gap-2 w-full">
+        <div className="flex items-center flex-col gap-2 w-full">
           <FilledTextField
             type="text"
             value={inputString}
@@ -331,6 +331,7 @@ function ZigzagConversionVisualizer() {
         {/* Zigzag Grid Visualization */}
         <div className="h-[300px] bg-surfaceContainer-highest flex flex-col overflow-scroll relative">
           <p className="text-title-medium">Visual Zigzag Pattern:</p>
+
           {/* Current character indicator */}
           {currentCharIndex >= 0 && currentCharIndex < inputString.length && (
             <div className="absolute bottom-0 right-0 text-label-medium">
@@ -404,13 +405,17 @@ function ZigzagConversionVisualizer() {
           })}
         </div>
 
-        <div className="flex items-center gap-2 h-max grow">
+        <div className="flex gap-2 grow">
           {/* Direction indicator */}
           <div className="p-2 bg-surfaceContainer-high h-full flex w-1/2 flex-col rounded-md text-center gap-2">
             <span className="text-title-small">Direction</span>
 
             <span
-              className={direction === 1 ? "text-red-400" : "text-green-400"}
+              className={
+                direction === 1
+                  ? "text-red-400 font-bold"
+                  : "text-green-400 font-bold"
+              }
             >
               {direction === 1 ? "↓ DOWN" : "↑ UP"}
             </span>
@@ -420,7 +425,7 @@ function ZigzagConversionVisualizer() {
           </div>
 
           {/* Current row indicator */}
-          <div className="p-2 bg-surfaceContainer-high flex h-full w-1/2 flex-col rounded-md text-center gap-2">
+          <div className="p-2 bg-surfaceContainer-high flex  w-1/2 flex-col rounded-md text-center gap-2">
             <span className="text-title-small">Current Row</span>
             <span className="text-indigo-400 font-bold">
               {currentRowIndex >= 0 ? currentRowIndex : "-"}
