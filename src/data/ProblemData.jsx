@@ -6,6 +6,7 @@ import PalindromeNumberVisualizer from "../Solutions/PalindromeNumberVisualizer"
 import RomanToIntVisualizer from "../Solutions/RomanToIntVisualizer";
 import LongestPalindromeVisualizer from "../Solutions/LongestPalidromeVisualizer";
 import ZigzagConversionVisualizer from "../Solutions/ZigzagConversionVisualizer";
+import ReverseIntegerVisualizer from "../Solutions/ReverseIntegerVisualizer";
 
 export const problemData = {
   1: {
@@ -55,6 +56,7 @@ export const problemData = {
     description:
       "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.",
     difficulty: "Medium",
+    visualizer: <ReverseIntegerVisualizer />,
   },
   8: {
     title: "String to Integer (atoi)",

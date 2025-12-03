@@ -1,5 +1,5 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
-import  { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import FilledTextField from "../components/textFields/FilledTextField";
 import StandardButtonS from "../components/buttons/StandardButton";
 import TonalButton from "../components/buttons/TonalButton";
@@ -462,6 +462,7 @@ function LongestSubstringVisualizer() {
           <span>Visited</span>
         </div>
       </div>
+      
       {/* Controls */}
       <div className="flex  flex-col gap-2 flex-wrap">
         <div className="flex items-center gap-2">
@@ -515,7 +516,7 @@ function LongestSubstringVisualizer() {
             <strong>Check duplicate:</strong> While current character exists in
             set:
           </li>
-          <ul style={{ marginLeft: "20px", marginTop: "5px" }}>
+          <ul className="text-body-large">
             <li>Remove character at left pointer from set</li>
             <li>Move left pointer forward (shrink window from left)</li>
           </ul>
