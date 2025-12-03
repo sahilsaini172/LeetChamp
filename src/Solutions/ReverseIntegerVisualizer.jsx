@@ -22,9 +22,6 @@ function ReverseIntegerVisualizer() {
 
   const animationRef = useRef(null);
 
-  const width = 1000;
-  const height = 750;
-
   const INT_MAX = Math.pow(2, 31) - 1; // 2147483647
   const INT_MIN = -Math.pow(2, 31); // -2147483648
 
@@ -222,40 +219,6 @@ function ReverseIntegerVisualizer() {
       <h2 className="text-headline-medium">
         Reverse Integer Visualizer (with Overflow Detection)
       </h2>
-      {/* Controls */}
-      <div className="flex  flex-col gap-2 flex-wrap">
-        <FilledTextField
-          type="text"
-          value={inputNumber}
-          onChange={(e) => setInputNumber(parseInt(e.target.value) || 0)}
-          label={inputNumber}
-          disabled={running}
-          className="flex-1"
-          placeholder="Enter integer"
-          supportingText={false}
-        />
-        <div className="flex items-center gap-2">
-          <StandardButtonS
-            text={running ? "Reversing..." : "Reverse Number"}
-            onClick={runVisualization}
-            disabled={running}
-            className="grow"
-          />
-          <TonalButton
-            text="Stop"
-            disabled={!running}
-            onClick={stopVisualization}
-            style="destruction"
-            className="grow"
-          />
-          <TonalButton
-            text="Reset"
-            disabled={running}
-            onClick={reset}
-            className="grow"
-          />
-        </div>
-      </div>
 
       {/* Status */}
       <div className={`p-2 bg-surfaceContainer text-label-large rounded-md `}>
@@ -427,6 +390,41 @@ function ReverseIntegerVisualizer() {
         <div className="flex items-center px-2 py-1 grow flex-wrap justify-center rounded-sm bg-surfaceContainer-highest gap-1 text-label-small">
           <div className="size-4 bg-primary rounded-full"></div>
           <span>Popped digit</span>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="flex  flex-col gap-2 flex-wrap">
+        <FilledTextField
+          type="text"
+          value={inputNumber}
+          onChange={(e) => setInputNumber(parseInt(e.target.value) || 0)}
+          label={inputNumber}
+          disabled={running}
+          className="flex-1"
+          placeholder="Enter integer"
+          supportingText={false}
+        />
+        <div className="flex items-center gap-2">
+          <StandardButtonS
+            text={running ? "Reversing..." : "Reverse Number"}
+            onClick={runVisualization}
+            disabled={running}
+            className="grow"
+          />
+          <TonalButton
+            text="Stop"
+            disabled={!running}
+            onClick={stopVisualization}
+            style="destruction"
+            className="grow"
+          />
+          <TonalButton
+            text="Reset"
+            disabled={running}
+            onClick={reset}
+            className="grow"
+          />
         </div>
       </div>
 
