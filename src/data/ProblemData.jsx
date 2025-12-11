@@ -7,6 +7,7 @@ import RomanToIntVisualizer from "../Solutions/RomanToIntVisualizer";
 import LongestPalindromeVisualizer from "../Solutions/LongestPalidromeVisualizer";
 import ZigzagConversionVisualizer from "../Solutions/ZigzagConversionVisualizer";
 import ReverseIntegerVisualizer from "../Solutions/ReverseIntegerVisualizer";
+import AtoiVisualizer from "../Solutions/Atoivisualizer";
 
 export const problemData = {
   1: {
@@ -63,6 +64,7 @@ export const problemData = {
     description:
       "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.",
     difficulty: "Medium",
+    visualizer: <AtoiVisualizer/>
   },
   9: {
     title: "Palindrome Number",
