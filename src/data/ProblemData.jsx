@@ -8,6 +8,7 @@ import LongestPalindromeVisualizer from "../Solutions/LongestPalidromeVisualizer
 import ZigzagConversionVisualizer from "../Solutions/ZigzagConversionVisualizer";
 import ReverseIntegerVisualizer from "../Solutions/ReverseIntegerVisualizer";
 import AtoiVisualizer from "../Solutions/Atoivisualizer";
+import RegexDPVisualizer from "../Solutions/RegexDPVisualizer";
 
 export const problemData = {
   1: {
@@ -64,7 +65,7 @@ export const problemData = {
     description:
       "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.",
     difficulty: "Medium",
-    visualizer: <AtoiVisualizer/>
+    visualizer: <AtoiVisualizer />,
   },
   9: {
     title: "Palindrome Number",
@@ -78,6 +79,7 @@ export const problemData = {
     description:
       "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where '.' matches any single character and '*' matches zero or more of the preceding element.",
     difficulty: "Hard",
+    visualizer: <RegexDPVisualizer />,
   },
   11: {
     title: "Container With Most Water",

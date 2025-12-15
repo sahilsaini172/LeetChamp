@@ -6,13 +6,13 @@ export default function ProblemItem() {
   function getDifficultyColor(str) {
     switch (str) {
       case "Hard":
-        return "text-hard";
+        return "text-red-400";
       case "Medium":
-        return "text-medium";
+        return "text-orange-400";
       case "Easy":
-        return "text-easy";
+        return "text-green-400";
       default:
-        return "text-white";
+        return "text-invert";
     }
   }
   // Convert object to array of entries [id, data]

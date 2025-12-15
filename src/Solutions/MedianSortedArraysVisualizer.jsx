@@ -607,6 +607,7 @@ function MedianSortedArraysVisualizer() {
           </div>
         </div>
       </div>
+      
       {/* Controls */}
       <div className="flex flex-col gap-2 w-full">
         <div className="flex flex-col items-center gap-2 w-full">
@@ -668,7 +669,7 @@ function MedianSortedArraysVisualizer() {
           </li>
           <li>
             <strong>Determine median position:</strong>
-            <ul style={{ marginLeft: "20px", marginTop: "5px" }}>
+            <ul className="text-body-large">
               <li>
                 If total length is even: need elements at positions (m+n)/2-1
                 and (m+n)/2
@@ -688,7 +689,7 @@ function MedianSortedArraysVisualizer() {
           </li>
           <li>
             <strong>Calculate median:</strong>
-            <ul style={{ marginLeft: "20px", marginTop: "5px" }}>
+            <ul className="text-body-large">
               <li>Even: average of two middle elements</li>
               <li>Odd: the single middle element</li>
             </ul>
