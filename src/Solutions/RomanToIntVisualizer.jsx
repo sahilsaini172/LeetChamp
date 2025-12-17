@@ -20,9 +20,6 @@ function RomanToIntVisualizer() {
 
   const animationRef = useRef(null);
 
-  const width = 1000;
-  const height = 700;
-
   const roman = {
     I: 1,
     V: 5,

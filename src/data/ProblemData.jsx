@@ -10,6 +10,7 @@ import ReverseIntegerVisualizer from "../Solutions/ReverseIntegerVisualizer";
 import AtoiVisualizer from "../Solutions/Atoivisualizer";
 import RegexDPVisualizer from "../Solutions/RegexDPVisualizer";
 import MaxAreaVisualizer from "../Solutions/MaxAreaVisualizer";
+import IntToRomanVisualizer from "../Solutions/IntToRomanVisualizer";
 
 export const problemData = {
   1: {
@@ -94,6 +95,7 @@ export const problemData = {
     description:
       "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Given an integer, convert it to a roman numeral.",
     difficulty: "Medium",
+    visualizer: <IntToRomanVisualizer />,
   },
   13: {
     title: "Roman to Integer",
