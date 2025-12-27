@@ -11,6 +11,7 @@ import AtoiVisualizer from "../Solutions/Atoivisualizer";
 import RegexDPVisualizer from "../Solutions/RegexDPVisualizer";
 import MaxAreaVisualizer from "../Solutions/MaxAreaVisualizer";
 import IntToRomanVisualizer from "../Solutions/IntToRomanVisualizer";
+import LongestCommonPrefixVisualizer from '../Solutions/LongestCommonPrefixVisualizer'
 
 export const problemData = {
   1: {
@@ -109,6 +110,7 @@ export const problemData = {
     description:
       "Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string ''.",
     difficulty: "Easy",
+    visualizer: <LongestCommonPrefixVisualizer/>
   },
   15: {
     title: "3Sum",

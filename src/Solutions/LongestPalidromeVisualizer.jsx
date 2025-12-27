@@ -587,7 +587,7 @@ function LongestPalindromeVisualizer() {
           <li>
             <strong>Check function:</strong> For each substring, verify if it's
             a palindrome:
-            <ul style={{ marginLeft: "20px", marginTop: "5px" }}>
+            <ul className="text-body-large">
               <li>Initialize left pointer at start, right pointer at end-1</li>
               <li>
                 While left &lt; right, compare characters at both pointers
