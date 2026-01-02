@@ -11,7 +11,8 @@ import AtoiVisualizer from "../Solutions/Atoivisualizer";
 import RegexDPVisualizer from "../Solutions/RegexDPVisualizer";
 import MaxAreaVisualizer from "../Solutions/MaxAreaVisualizer";
 import IntToRomanVisualizer from "../Solutions/IntToRomanVisualizer";
-import LongestCommonPrefixVisualizer from '../Solutions/LongestCommonPrefixVisualizer'
+import LongestCommonPrefixVisualizer from "../Solutions/LongestCommonPrefixVisualizer";
+import ThreeSumVisualizer from "../Solutions/ThreeSumVisualizer";
 
 export const problemData = {
   1: {
@@ -110,13 +111,14 @@ export const problemData = {
     description:
       "Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string ''.",
     difficulty: "Easy",
-    visualizer: <LongestCommonPrefixVisualizer/>
+    visualizer: <LongestCommonPrefixVisualizer />,
   },
   15: {
     title: "3Sum",
     description:
       "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
     difficulty: "Medium",
+    visualizer: <ThreeSumVisualizer />,
   },
   16: {
     title: "3Sum Closest",
