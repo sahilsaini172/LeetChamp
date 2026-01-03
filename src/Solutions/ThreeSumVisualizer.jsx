@@ -424,7 +424,7 @@ function ThreeSumVisualizer() {
         {/* Final result */}
         {finalResult !== null && (
           <div className="p-2 flex items-center gap-2">
-            <span key={idx} className="font-bold text-green-400">
+            <span  className="font-bold text-green-400">
               ✓ Found {finalResult.length} unique triplet(s)
             </span>
           </div>

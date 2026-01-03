@@ -13,6 +13,7 @@ import MaxAreaVisualizer from "../Solutions/MaxAreaVisualizer";
 import IntToRomanVisualizer from "../Solutions/IntToRomanVisualizer";
 import LongestCommonPrefixVisualizer from "../Solutions/LongestCommonPrefixVisualizer";
 import ThreeSumVisualizer from "../Solutions/ThreeSumVisualizer";
+import ThreeSumClosestVisualizer from "../Solutions/ThreeSumClosestVisualizer";
 
 export const problemData = {
   1: {
@@ -125,6 +126,7 @@ export const problemData = {
     description:
       "Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.",
     difficulty: "Medium",
+    visualizer: <ThreeSumClosestVisualizer/>
   },
   17: {
     title: "Letter Combinations of a Phone Number",
