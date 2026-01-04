@@ -3,8 +3,6 @@ import SearchBar from "../components/Search/SearchBar";
 import ProblemRow from "../ProblemItem";
 import { useEffect, useState } from "react";
 import IcnButton from "../components/buttons/IcnButton";
-import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisualizer";
-import LetterCombinationsVisualizerOg from "../Solutions/LetterCombinationsVisualizerOg";
 
 export default function Home() {
   const [width, setWidth] = useState(0);
@@ -31,8 +29,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex">
-          <LetterCombinationsVisualizer />
-
+          <ProblemRow />
         </div>
       </section>
     </div>

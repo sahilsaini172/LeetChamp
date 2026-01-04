@@ -14,6 +14,7 @@ import IntToRomanVisualizer from "../Solutions/IntToRomanVisualizer";
 import LongestCommonPrefixVisualizer from "../Solutions/LongestCommonPrefixVisualizer";
 import ThreeSumVisualizer from "../Solutions/ThreeSumVisualizer";
 import ThreeSumClosestVisualizer from "../Solutions/ThreeSumClosestVisualizer";
+import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisualizer";
 
 export const problemData = {
   1: {
@@ -133,6 +134,7 @@ export const problemData = {
     description:
       "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.",
     difficulty: "Medium",
+    visualizer: <LetterCombinationsVisualizer/>
   },
   18: {
     title: "4Sum",
