@@ -510,7 +510,7 @@ function FourSumVisualizer() {
 
                     {/* 'i' Pointer (Current Mid/Check) */}
                     {idx === iIndex && (
-                      <div className="absolute -top-6 text-red-500 text-label-large transition-all duration-300">
+                      <div className="absolute -top-6 text-orange-500 text-label-large transition-all duration-300">
                         i
                       </div>
                     )}
