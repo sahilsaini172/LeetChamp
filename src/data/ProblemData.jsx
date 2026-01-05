@@ -15,6 +15,7 @@ import LongestCommonPrefixVisualizer from "../Solutions/LongestCommonPrefixVisua
 import ThreeSumVisualizer from "../Solutions/ThreeSumVisualizer";
 import ThreeSumClosestVisualizer from "../Solutions/ThreeSumClosestVisualizer";
 import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisualizer";
+import FourSumVisualizer from "../Solutions/FourSumVisualizer";
 
 export const problemData = {
   1: {
@@ -127,20 +128,21 @@ export const problemData = {
     description:
       "Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.",
     difficulty: "Medium",
-    visualizer: <ThreeSumClosestVisualizer/>
+    visualizer: <ThreeSumClosestVisualizer />,
   },
   17: {
     title: "Letter Combinations of a Phone Number",
     description:
       "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.",
     difficulty: "Medium",
-    visualizer: <LetterCombinationsVisualizer/>
+    visualizer: <LetterCombinationsVisualizer />,
   },
   18: {
     title: "4Sum",
     description:
       "Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that nums[a] + nums[b] + nums[c] + nums[d] == target.",
     difficulty: "Medium",
+    visualizer: <FourSumVisualizer />,
   },
   19: {
     title: "Remove Nth Node From End of List",
