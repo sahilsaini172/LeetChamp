@@ -199,9 +199,7 @@ function RegexDPVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 w-full text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">
-        Regular Expression Matching DP Visualizer
-      </h2>
+       
 
       {/* Controls */}
       <div className="flex flex-col gap-2 w-full">

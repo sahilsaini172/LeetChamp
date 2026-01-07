@@ -7,7 +7,9 @@ export default function Problem() {
   const VisualizerComponent = problem.visualizer;
 
   return (
-    <div className="p-4">
+    <div className="p-4 flex flex-col gap-2">
+      <h1 className="text-display-small">{problem.title}</h1>
+      <p className="text-body-large">{problem.description}</p>
       {VisualizerComponent ? (
         VisualizerComponent
       ) : (

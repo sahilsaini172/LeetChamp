@@ -270,7 +270,6 @@ function ThreeSumVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">3 Sum Visualizer (Two Pointers)</h2>
 
       {/* Status */}
       <div className={`p-2 bg-surfaceContainer text-label-large rounded-md `}>

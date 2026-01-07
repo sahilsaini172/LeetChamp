@@ -283,9 +283,7 @@ function AddTwoNumbersVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">
-        Add Two Numbers <span className="inline-flex">(Linked Lists)</span>
-      </h2>
+    
       <p className="text-body-small">
         Watch digit-by-digit addition with carry propagation through linked
         lists

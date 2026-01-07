@@ -265,12 +265,7 @@ function LongestCommonPrefixVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">
-        Longest Common Prefix (Binary Search)
-      </h2>
-      <p className="text-body-small">
-        Binary search on prefix length (1 to minLen)[web:197][web:201]
-      </p>
+       
 
       {/* Status */}
       <div

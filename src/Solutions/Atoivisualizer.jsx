@@ -356,9 +356,6 @@ function AtoiVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">
-        String to Integer (atoi) Visualizer
-      </h2>
 
       {/* Controls */}
       <div className="flex  flex-col gap-2 flex-wrap">

@@ -233,7 +233,6 @@ function RomanToIntVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 w-full text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">Roman to Integer Visualizer</h2>
 
       {/* Status */}
       <div className="p-2 bg-surfaceContainer text-label-large rounded-md">

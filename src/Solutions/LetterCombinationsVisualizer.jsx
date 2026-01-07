@@ -277,7 +277,7 @@ function LetterCombinationsVisualizer() {
 
   return (
     <div className="flex flex-col w-full gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">Letter Combinations Backtracking</h2>
+
 
       {/* Status & Path */}
       <div

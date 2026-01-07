@@ -211,9 +211,7 @@ function MaxAreaVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">
-        Container With Most Water Visualizer
-      </h2>
+
 
       {/*Status*/}
       <div

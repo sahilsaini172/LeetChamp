@@ -262,8 +262,6 @@ function ZigzagConversionVisualizer() {
 
   return (
     <div className="flex flex-col gap-2 w-full text-onSurface **:ease-in **:duration-150 ease-in duration-150">
-      <h2 className="text-headline-medium">Zigzag Conversion Visualizer</h2>
-
       {/* Controls */}
       <div className="flex flex-col gap-2 w-full">
         <div className="flex items-center flex-col gap-2 w-full">
