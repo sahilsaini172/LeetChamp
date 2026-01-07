@@ -16,6 +16,7 @@ import ThreeSumVisualizer from "../Solutions/ThreeSumVisualizer";
 import ThreeSumClosestVisualizer from "../Solutions/ThreeSumClosestVisualizer";
 import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisualizer";
 import FourSumVisualizer from "../Solutions/FourSumVisualizer";
+import RemoveNthVisualizer from "../Solutions/RemoveNthVisualizer";
 
 export const problemData = {
   1: {
@@ -149,6 +150,7 @@ export const problemData = {
     description:
       "Given the head of a linked list, remove the nth node from the end of the list and return its head.",
     difficulty: "Medium",
+    visualizer: <RemoveNthVisualizer />,
   },
   20: {
     title: "Valid Parentheses",

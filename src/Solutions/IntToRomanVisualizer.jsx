@@ -286,7 +286,7 @@ function IntToRomanVisualizer() {
         </div>
 
         {/* Operation history */}
-        <div className="p-2 bg-surfaceContainer-high flex flex-col rounded-md gap-1 max-h-[160px] overflow-auto">
+        <div className="p-2 bg-surfaceContainer-high flex flex-col rounded-md gap-1 max-h-40 overflow-auto">
           <span className="text-center text-title-small">Operation History</span>
 
           {history.slice(-8).map((item, index) => (
