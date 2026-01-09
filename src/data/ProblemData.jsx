@@ -17,6 +17,7 @@ import ThreeSumClosestVisualizer from "../Solutions/ThreeSumClosestVisualizer";
 import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisualizer";
 import FourSumVisualizer from "../Solutions/FourSumVisualizer";
 import RemoveNthVisualizer from "../Solutions/RemoveNthVisualizer";
+import ValidParenthesesVisualizer from "../Solutions/ValidParenthesesVisualizer";
 
 export const problemData = {
   1: {
@@ -157,6 +158,7 @@ export const problemData = {
     description:
       "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
     difficulty: "Easy",
+    visualizer: <ValidParenthesesVisualizer/>
   },
   21: {
     title: "Merge Two Sorted Lists",
