@@ -18,6 +18,7 @@ import LetterCombinationsVisualizer from "../Solutions/LetterCombinationsVisuali
 import FourSumVisualizer from "../Solutions/FourSumVisualizer";
 import RemoveNthVisualizer from "../Solutions/RemoveNthVisualizer";
 import ValidParenthesesVisualizer from "../Solutions/ValidParenthesesVisualizer";
+import MergeTwoListsVisualizer from "../Solutions/MergeTwoListsVisualizer";
 
 export const problemData = {
   1: {
@@ -165,6 +166,7 @@ export const problemData = {
     description:
       "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists into one sorted list.",
     difficulty: "Easy",
+    visualizer: <MergeTwoListsVisualizer/>
   },
   22: {
     title: "Generate Parentheses",
